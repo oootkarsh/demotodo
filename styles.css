@@ -1,0 +1,129 @@
+/*
+    styles.css - Styles for the Todo List App
+    ----------------------------------------
+    - Modern, clean look
+    - Responsive design
+    - Pretty colors and smooth interactions
+*/
+
+body {
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #3a7bd5;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+#todo-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: 1px solid #b2bec3;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#todo-input:focus {
+    border: 1.5px solid #3a7bd5;
+}
+
+#todo-form button {
+    background: #3a7bd5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#todo-form button:hover {
+    background: #005bea;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f6fb;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(58, 123, 213, 0.05);
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    word-break: break-word;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #b2bec3;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #3a7bd5;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.action-btn:hover {
+    background: #e3f0fc;
+    color: #005bea;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+    }
+    #todo-input {
+        font-size: 0.95rem;
+    }
+}
