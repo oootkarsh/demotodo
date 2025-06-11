@@ -6,6 +6,15 @@
 const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
+const todoTitle = document.getElementById('todo-title');
+
+
+todoTitle.textContent = 'My Todo List';
+todoTitle.style.cursor = 'caret';
+todoTitle.contentEditable = true;
+todoTitle.onblur = () => {
+    localStorage.setItem('todoTitle', todoTitle.textContent);
+};
 
 // Key for localStorage
 const STORAGE_KEY = 'todos';
